@@ -11,5 +11,5 @@ for (i = 0; i < numMas.length; i++) {
 
 var up = mul**3;
 
-console.log(Math.round( up / 100000 ));
+document.write('<b>' + Math.round( up / 100000 ) + '</b>');
 
