@@ -6,10 +6,8 @@ console.log(numMas);
 var mul = 1;
 for (i = 0; i < numMas.length; i++) {
 	mul *= (+numMas[i]);
-	console.log(mul);
-}
+} console.log(mul);
 
-var up = mul**3;
-
-document.write('<b>' + Math.round( up / 100000 ) + '</b>');
-
+var up = String(Math.pow(mul, 3));
+document.write('' + up.slice(0, 2));
+// document.write('' + up[0] + up[1]);
