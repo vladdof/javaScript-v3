@@ -19,7 +19,7 @@ console.log(week);
 for (let i = 0; i < week.length; i++) {
 
 	// if (i == (week.length - 1) || i == (week.length - 2)) тоже работает
-	if ( i > 4 ) {
+	if ( i > 4 && i != now) {
 		document.write("<b>" + week[i] + "</b>" + "<br>");
 
 	} else if ( i == now ) { 
