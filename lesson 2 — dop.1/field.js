@@ -10,19 +10,21 @@ var week = [
 ];
 
 //c текущей датой через эту переменную не справился
-// var date = new Date(); 
-// var now = date.getDay();
+var date = new Date(); 
+var now = date.getDay() - 1;
+console.log(now);
 
 console.log(week);
 
 for (let i = 0; i < week.length; i++) {
 
-	if (i == (week.length - 1) || i == (week.length - 2)) {
+	// if (i == (week.length - 1) || i == (week.length - 2)) тоже работает
+	if ( i > 4 ) {
 		document.write("<b>" + week[i] + "</b>" + "<br>");
 
-	} else if (week[i] == "Пятница") {
-		document.write("<i>" + week[i] + "</i>" + "<br>");
-
+	} else if ( i == now ) { 
+		document.write("<i>" + week[now] + "</i>" + "<br>");
+		
 	} else {
 		document.write(week[i] + "<br>");
 	}
