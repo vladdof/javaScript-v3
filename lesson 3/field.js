@@ -6,7 +6,6 @@ let budget,
 
 function start() {
 
-	budget = +prompt('Ваш бюджет на месяц?', 'Ваш бюджет - 10000');
 		//isNaN - если параметр,кот.передали не явл.числом то выдает true 
 		while ( isNaN(budget) || budget == '' || budget == null ) {
 			budget = +prompt('Ваш бюджет на месяц?', 'Ваш бюджет - 10000');
@@ -75,24 +74,34 @@ budgetDay();
 
 //сделали дисконт.систем Задание 2
 function discountSystem() {
+	price = 1500;
+
+	alert('Цены на все наши товары — 1500 рублей!' + ' ' + 'Успей купить!\n' + 
+		'Сейчас только проверим нашу систему скидок.');
 
 	if ( mainList.discount == false ) {
-		price = budgetOneDay;
-		console.log(price);
+		alert ('У Вас нет скидки по нашей программе!\n' + 'Заплати' + price + ' рублей');
 	} else {
-		price = budgetOneDay*0.8;
-		console.log(price);
+		price = price*0.8;
+		alert('Поздравляем! Вы получаете скидку в 20%!\n' + 'Заплати ' + price + ' рублей');
 	}
 }
 discountSystem();
 
 //спросили имена сотрудников Задание 3-4
 function takeEmployers() {
-	let i = 0;
-	while ( i < 4) {
-		mainList.employers[i] = prompt("Как Вас зовут?");
-		i++;
-		console.log(mainList.employers);
+
+	for (let i = 0; i < 4; i++) {
+
+		let a = prompt("Как Вас зовут?");
+
+		if ( isNaN(a) && a != '' && a != null) {
+			mainList.employers['number' + '—' + i] = a;
+		} else {
+			alert("Введите только имя!");
+			i--;
+		}
+
 	}
 }
 takeEmployers();
