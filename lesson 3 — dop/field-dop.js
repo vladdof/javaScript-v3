@@ -5,24 +5,96 @@ str = str.charAt(0).toUpperCase() + str.slice(1);
 console.log(str);
 
 //Теперь замените все “-” на пробелы
+function checkStr() {
+	let a = str.replace(/-/g, ' ');
+	// let a = str.split('-').join(' ');
+	console.log(a);
 
-//вторая часть задания
-var arr = [
-	"164",
-	"71573",
-	"1789653",
-	"272789",
-	"33579",
-	"2437",
-	"33789752"
+	//Из получившейся строки вырезать слово “легким”, заменить 2 последние буквы на “о”
+	let b = a.search(/ле/);
+	let c = a.slice(b);
+	console.log(c);
+	let d = c.substring(0, c.length - 2);
+
+	let i = 0;
+	while (i < 2 ) {
+		let z = "о";
+		d = d + z;
+		i++;
+	} 
+	document.write(d);
+}
+checkStr();
+
+//Вывести в консоль квадратный корень из суммы кубов его элементов
+let arr = [
+	20, 
+	33, 
+	1, 
+	"Человек", 
+	2, 
+	3
 ];
-console.log(arr);
+let cube = [],
+	sum,
+	sqrt;
+
+for ( let i = 0; i < arr.length; i++ ) {
+
+	if ( typeof (arr[i]) === 'string' ) {
+		arr.splice(i, 1);
+	}
+	console.log(arr);
+
+}
 
 for (let i = 0; i < arr.length; i++) {
-
-	if (arr[i].charAt(0) == 3 || arr[i].charAt(0) == 7) {
-		console.log(arr[i]);
-	} 
+	cube[i] = Math.pow(arr[i], 3); 
+	console.log(cube);
 }
+
+sum = eval(cube.join('+'));
+	console.log(sum);
+
+sqrt = Math.sqrt(sum);
+console.log(sqrt);
+
+// //Создайте функцию, которая принимает 1 аргумент
+
+function checkArgum() {
+
+	for(let i = 0; i < 1; i++) {
+
+		let argum = prompt('Введите небольшой рассказ о вашем дне!');
+
+		if ( isNaN(argum) ) {
+			alert('молодец!');
+		} else {
+			alert('Вы ввели неверные данные! Введи рассказ!');
+			i--;
+		}
+
+// В полученной строке функция должна убрать все пробелы в начале и в конце
+		argum = argum.trim();
+		console.log(argum);
+		// console.log(argum.replace(/^\s*|\s*$/g, '')); чуть не умер пока выродил
+
+//Если строка более 50 знаков - то после 50го символа часть 
+// текста скрывается и вместо них появляются три точки (...)
+		if ( argum.length >= 15) {
+			let b= argum.slice(0, 15);
+			let p = b + '...'; 
+			console.log(p);
+		} 
+		
+	}
+
+}
+checkArgum();
+
+
+
+
+
 
 
