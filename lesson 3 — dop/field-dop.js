@@ -1,9 +1,14 @@
 //Сделать так, чтобы строка начиналась с большой буквы, замените все “-” на пробелы
 let str = "урок-3-был слишком легким";
 str = (str.charAt(0).toUpperCase() + str.slice(1)).replace(/-/g, ' ');
+console.log(str);
+
+//первый вариант
+let b = str.replace(str, 'легкоо');
+document.write(b);
+//второй вариант
 let light = str.search(/ле/);
 let c = str.slice(light,-2)+"oo";
-console.log(str);
 document.write(c);
 
 //Теперь замените все “-” на пробелы
