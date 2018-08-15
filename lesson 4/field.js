@@ -114,6 +114,10 @@ var mainList = {
 	}
 
 };
+//вид товаров
+mainList.chooseGoods();
+//ввод товатор
+mainList.chooseShopItems();
 
 console.log(mainList);
 
