@@ -43,7 +43,7 @@ var mainList = {
 
 		//2) При помощи метода перебора массива(forEach) вывести на экран сообщение "У нас вы можете купить: " и полученные товары
 		mainList.shopGoods.forEach( function(item,i,arr) {
-			alert("У нас вы можете купить: " + (i+1) + " — " + item + " ");
+			document.write("У нас вы можете купить: " + (i+1) + " — " + item + " " + "<br>");
 		});
 
 		//3) Используя цикл for in для объекта вывести в консоль сообщение "Наш магазин включает в себя: "
@@ -110,7 +110,7 @@ var mainList = {
 		mainList.shopItems.push(prompt("Подожди, может еще товар ", ""));
 		mainList.shopItems.sort();
 
-		console.log(mainList.shopItems);
+		console.log(mainList.shopItems); 
 	}
 
 };
