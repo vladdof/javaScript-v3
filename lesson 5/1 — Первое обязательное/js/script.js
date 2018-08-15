@@ -10,7 +10,7 @@
 
 let menu = document.querySelector('.menu'),
 	item = document.querySelectorAll('.menu-item'),
-	body_bg = document.querySelector('body'),
+	body = document.querySelector('body'),
 	title = document.querySelector('.title'),
 	promo = document.querySelector('.adv'),
 	answer = document.querySelector('.prompt'),
@@ -28,7 +28,7 @@ menu.appendChild(li_5);
 
 
 //2
-// body_bg.style.backgroundImage = 'url(../img/apple_true.jpg)';
+body.style.background = 'url(../img/apple_true.jpg) center no-repeat';
 
 //3
 title.textContent = "Подлинную технику Apple";
