@@ -40,16 +40,6 @@ var mainList = {
 				i--;
 			}
 		}
-
-		//2) При помощи метода перебора массива(forEach) вывести на экран сообщение "У нас вы можете купить: " и полученные товары
-		mainList.shopGoods.forEach( function(item,i,arr) {
-			document.write("У нас вы можете купить: " + (i+1) + " — " + item + " " + "<br>");
-		});
-
-		//3) Используя цикл for in для объекта вывести в консоль сообщение "Наш магазин включает в себя: "
-		for ( let key in mainList.shopGoods ) {
-			console.log("Наш магазин включает в себя: " + mainList.shopGoods[key]);
-		}
 	},
 	workTime: function workTime(time) {
 
@@ -103,20 +93,27 @@ var mainList = {
 		//проверка,Что пользователь может ввести
 		while (isFinite(items) || items == '' || items == null ) {
 			items = prompt("Перечислите через запятую товары", "товар1,товар2");
-
 		}
 		mainList.shopItems = items.split(',');
 
 		mainList.shopItems.push(prompt("Подожди, может еще товар ", ""));
 		mainList.shopItems.sort();
 
-		console.log(mainList.shopItems); 
+		//2) При помощи метода перебора массива(forEach) вывести на экран сообщение "У нас вы можете купить: " и полученные товары
+		mainList.shopItems.forEach( function(item,i,arr) {
+			document.write("У нас вы можете купить: " + (i+1) + " — " + item + " " + "<br>");
+		});
 	}
 
 };
+
+//3) Используя цикл for in для объекта вывести в консоль сообщение "Наш магазин включает в себя: "
+for ( let key in mainList ) {
+	console.log(`Наш магазин включает в себя: ${key}`);
+}
 //вид товаров
 mainList.chooseGoods();
-//ввод товатор
+// //ввод товатор
 mainList.chooseShopItems();
 
 console.log(mainList);
