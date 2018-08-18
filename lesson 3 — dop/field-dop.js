@@ -10,7 +10,6 @@ document.write(b);
 let light = str.search(/ле/);
 let c = str.slice(light,-2)+"oo";
 document.write(c);
-
 //Теперь замените все “-” на пробелы
 // function checkStr() {
 	// let a = str.replace(/-/g, ' ');

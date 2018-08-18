@@ -28,7 +28,7 @@ menu.appendChild(li_5);
 
 
 //2
-body.style.background = 'url(../img/apple_true.jpg) center no-repeat';
+body.style.background = 'url(img/apple_true.jpg) center no-repeat';
 
 //3
 title.textContent = "Подлинную технику Apple";
