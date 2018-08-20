@@ -43,12 +43,12 @@ let body = document.querySelector('body'),
 	body.appendChild(btn);
 	body.insertBefore(text, inputDate1);
 
-	text.textContent = "Введите дату в формате: месяц.день.год";
+	text.textContent = "Введите дату в формате: день.месяц.год";
 	text.style.marginTop = "50px";
 	text.style.marginBottom = "20px";
 	inputDate1.style.marginRight = "20px";
-	inputDate1.placeholder = "11.02.2012";
-	inputDate2.placeholder = "11.02.2018";
+	inputDate1.type = 'date';
+	inputDate2.type = 'date';
 
 	btn.textContent = "Рассчитать разницу";
 
