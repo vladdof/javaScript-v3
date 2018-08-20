@@ -1,1 +1,4 @@
-# javaScript-v3
+# Курс по javaScript-v3
+***
+
+`h2 Ефанов Владислав`
