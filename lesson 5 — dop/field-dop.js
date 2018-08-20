@@ -11,9 +11,8 @@ let date = new Date(),
 	seconds = date.getSeconds(),
 	fullTime = hours + ':' + minutes + ':' + seconds;
 
-console.log(fullTime + ' ' + fullDate);
-
 // document.write(date.toLocaleString());
+document.write("Текущая дата и время — " + "<b>" + fullTime + ' ' + fullDate + "</b>" + '<br>');
 
 //3) Напишите функцию, которая выводит на страницу текущий день недели на русском языке
 let	dayWeek = date.getDay() - 1,
@@ -35,12 +34,19 @@ let body = document.querySelector('body'),
 	inputDate1 = document.createElement("input"),
 	inputDate2 = document.createElement("input"),
 	inputOut = document.createElement('p'),
-	btn = document.createElement('button');
+	btn = document.createElement('button'),
+	text = document.createElement('p');
 
 	body.appendChild(inputDate1);
 	body.appendChild(inputDate2);
 	body.appendChild(inputOut);
 	body.appendChild(btn);
+	body.insertBefore(text, inputDate1);
+
+	text.textContent = "Введите дату в формате: Месяц.День.Год";
+	text.style.marginTop = "50px";
+	text.style.marginBottom = "20px";
+	inputDate1.style.marginRight = "20px";
 
 	btn.textContent = "Рассчитать разницу";
 
