@@ -9,7 +9,7 @@ let date = new Date(),
 	hours = date.getHours() + 1,
 	minutes = date.getMinutes(),
 	seconds = date.getSeconds(),
-	fullTime = hours + ':' + minutes + ':' + seconds;
+	fullTime = ('0' + hours).slice(-2) + ':' + ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
 
 // document.write(date.toLocaleString());
 document.write("Текущая дата и время — " + "<b>" + fullTime + ' ' + fullDate + "</b>" + '<br>');
@@ -43,10 +43,12 @@ let body = document.querySelector('body'),
 	body.appendChild(btn);
 	body.insertBefore(text, inputDate1);
 
-	text.textContent = "Введите дату в формате: Месяц.День.Год";
+	text.textContent = "Введите дату в формате: месяц.день.год";
 	text.style.marginTop = "50px";
 	text.style.marginBottom = "20px";
 	inputDate1.style.marginRight = "20px";
+	inputDate1.placeholder = "11.02.2012";
+	inputDate2.placeholder = "11.02.2018";
 
 	btn.textContent = "Рассчитать разницу";
 
@@ -65,6 +67,6 @@ btn.addEventListener('click', function() {
 	console.log(date_2.toLocaleDateString());
 	console.log(date_1.toLocaleDateString());
 
-	inputOut.textContent = "Разность дат — " + minus + " дней";
+	inputOut.textContent = "Разница между датами — " + minus + " дней";
 
 });

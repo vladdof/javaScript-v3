@@ -1,0 +1,30 @@
+.btn {
+	font-size: 16px;
+	background-color: yellow;
+	padding: 10px 20px;
+	border: none;
+}
+
+.wrapper {
+	width: 310px;
+	height: 310px;
+	border: 2px solid red;
+	margin-top: 10px;
+	position: relative;
+}
+
+.box {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+}
+
+.first {
+	background-color: yellow;
+	width: 50px;
+	height: 20px;
+	border: none;
+}
