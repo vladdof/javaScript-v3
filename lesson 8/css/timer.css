@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #f3f3f3;
+}
+.container {
+	width: 100%;
+    height: 100vh;
+}
+	.row {
+		justify-content: center;
+	    align-items: center;
+	    width: 100%;
+	    height: 100%;
+	}
+		.time {
+			font-size: 42px;
+		}
+		.time:hover{
+			color: yellow;
+			font-size: 46px;
+		}
