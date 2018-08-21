@@ -20,8 +20,16 @@ let btnOpen = document.getElementById('open-btn'),
  	inputTime = document.querySelector("#time"),
  	inputBudget = document.querySelector("#budget"),
 //Получить поля имен сотрудников через querySelectorAll
- 	nameEmployers = document.querySelectorAll(".hire-employers-item");
- 	console.log(employersValue);
+ 	nameEmployers = document.querySelectorAll(".hire-employers-item"),
+
+ 	//задание к 6 дополнительному
+ 	main = document.querySelector('.main'),
+ 	open_box = document.querySelector('.open'),
+ 	discount_box = document.querySelector('.discount-box');
+
+ 	main.style.display = "none";
+ 	discount_box.style.display = "none";
+ 	
 
 
 let budget,
@@ -50,6 +58,10 @@ btnOpen.addEventListener('click', () => {
 	nameShop = prompt('Название вашего магазина?', 'Плеер').toUpperCase();
 	nameValue.textContent = nameShop;
 
+	//6 доп задание
+	main.style.display = "";
+	open_box.style.display = "none";
+	discount_box.style.display = "block";
 });
 
 //деактивация кнопок
