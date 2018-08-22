@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 //timer 
-	let deadline = '2018-12-21';
+	let deadline = '2018-08-23';
 
 	function getTimeRemaining(endtime) {
 		//переменная разницы между текущей и дедлайном
