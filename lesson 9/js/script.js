@@ -46,15 +46,15 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 //timer 
-	let deadline = '2018-08-23';
+	let deadline = '2018-08-24';
 
 	function getTimeRemaining(endtime) {
 		//переменная разницы между текущей и дедлайном
-		let t = Date.parse(endtime) - Date.parse(new Date()),
+		let timezoneOffset = (new Date().getTimezoneOffset())/60,
+			t = Date.parse(endtime) - Date.parse(new Date()),
 			seconds = Math.floor( (t/1000) % 60 ),
 			minutes = Math.floor( (t/1000/60) % 60 ),
-			hours = Math.floor( (t/(1000*60*60)) );
-
+			hours = Math.floor( (t/(1000*60*60)) + timezoneOffset - 1);
 		//Необходимо подставлять 0 перед значениями, 
 			if ( hours < 10 ) {
 				hours = "0" + hours;

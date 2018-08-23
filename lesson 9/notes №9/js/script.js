@@ -70,7 +70,7 @@ btn.addEventListener('click', function() {
 // };
 // showThis();
 
-//функция внутри функции считает своим контекстом выполнения считает window 
+//функция внутри функции считает своим контекстом выполнения window 
 // "use strict" //вместо windiw будет undefind/ теперь функ. не могут брать методы от глобального объекта и свойства
 // function showThis(a,b) { 
 // 	console.log(this);
