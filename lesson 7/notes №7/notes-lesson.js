@@ -66,38 +66,38 @@
 
 // let block = document.querySelector(".box");
 
-// 	//рисовать анимацию draw, duration - продолжительность
-// 	function animate(draw, duration) {
-// 		//время с начала загрузки страницы
-// 		let start = performance.now();
-// 		// рекурсивный вызов анимации
-// 		requestAnimationFrame( function animate(time) { 
-// 		//time это start при вызове анимации
+	// //рисовать анимацию draw, duration - продолжительность
+	// function animate(draw, duration) {
+	// 	//время с начала загрузки страницы
+	// 	let start = performance.now();
+	// 	// рекурсивный вызов анимации
+	// 	requestAnimationFrame( function animate(time) { 
+	// 	//time это start при вызове анимации
 
-// 			// сколько вр прошло с начала анимации
-// 			let timePassed = time - start;
+	// 		// сколько вр прошло с начала анимации
+	// 		let timePassed = time - start;
 
-// 			// если вр выполнения анимации привысело > чем заданная длительность, то фикс.конец анимации
-// 			if (timePassed > duration) {
-// 				timePassed = duration;
-// 			}
-// 			// рисуем соотношение анимации в момент timePassed
-// 			draw(timePassed);
+	// 		// если вр выполнения анимации привысело > чем заданная длительность, то фикс.конец анимации
+	// 		if (timePassed > duration) {
+	// 			timePassed = duration;
+	// 		}
+	// 		// рисуем соотношение анимации в момент timePassed
+	// 		draw(timePassed);
 
-// 			// если время анимации не закончено, то продолжаем анимацию
-// 			if(timePassed < duration) {
-// 				requestAnimationFrame(animate);
-// 			}
-// 		});
-// 	}
+	// 		// если время анимации не закончено, то продолжаем анимацию
+	// 		if(timePassed < duration) {
+	// 			requestAnimationFrame(animate);
+	// 		}
+	// 	});
+	// }
 
-// 	block.addEventListener('click', function() {
-// 		animate(
-// 			function(timePassed) {
-// 				block.style.left = timePassed / 5 + 'px';
-// 			},
-// 			2000);
-// 	});
+	// block.addEventListener('click', function() {
+	// 	animate(
+	// 		function(timePassed) {
+	// 			block.style.left = timePassed / 5 + 'px';
+	// 		},
+	// 		2000);
+	// });
 
 let block = document.querySelector(".box");
 
