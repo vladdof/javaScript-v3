@@ -19,12 +19,3 @@ body {
 		.col-auto {
 			text-align: center;
 		}
-			.input {
-				font-size: 42px;
-				border: none;
-	    		text-align: center;
-			}
-			p {
-				font-size: 36px;
-   				margin-bottom: 10px;
-			}
