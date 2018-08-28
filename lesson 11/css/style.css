@@ -1,3 +1,9 @@
+.status {
+  text-align: center;
+  font-size: 26px;
+  color: pink;
+  margin-top: 10px;
+}
 .fade {
   -webkit-animation-name: fade;
           animation-name: fade;
