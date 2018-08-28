@@ -188,10 +188,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 
 		// чтобы после отправки поля были пустые
-		// for (let i = 0; i < input.length; i++) {
-		// 	input[i].value = '';
-		// 	// очищаем поля ввода
-		// }
+		for (let i = 0; i < input.length; i++) {
+			input[i].value = '';
+			// очищаем поля ввода
+		}
 	});
 
 });
