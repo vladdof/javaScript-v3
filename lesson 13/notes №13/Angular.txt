@@ -1,0 +1,7 @@
+јнгул€р 
+
+1) node.js установить и npm пакеты
+2) typeScript 
+3) webpack собираем кучу файлов в один
+4) mwc - model view controller
+5 angular 
