@@ -318,8 +318,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				personsSum = +this.value;
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
-				if (restDays.value == '' || persons.value == '') {
-					total = 0;
+				if (restDays.value == '' || personsSum == 0) {
 					totalValue.innerHTML = 0;
 				} else {
 					let a = total;
@@ -332,7 +331,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				daysSum = +this.value;
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
-				if (personsSum.value == '' || restDays.value == '') {
+				if (persons.value == '' || daysSum == 0) {
 					totalValue.innerHTML = 0;
 				} else {
 					let a = total;
@@ -343,8 +342,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 			place.addEventListener('change', function() {
 
-				if (personsSum.value == '' || restDays.value == '') {
+				if (persons.value == '' || restDays.value == '') {
 					totalValue.innerHTML = 0; 
+				// } else if (persons.value.lenght == 0 || restDays.value.lenght == 0) {
+				// 	totalValue.innerHTML = 0;
 				} else {
 					// чтобы при выборе опять страны не было переумножения всего и вся
 					let a = total;
