@@ -319,6 +319,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
 				if (restDays.value == '' || persons.value == '') {
+					total = 0;
 					totalValue.innerHTML = 0;
 				} else {
 					let a = total;
