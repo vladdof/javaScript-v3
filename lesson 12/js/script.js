@@ -319,10 +319,11 @@ window.addEventListener('DOMContentLoaded', function() {
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
 				if (restDays.value == '' || persons.value == '') {
-					total = 0;
 					totalValue.innerHTML = 0;
 				} else {
-					totalValue.innerHTML = total;
+					let a = total;
+					// totalValue.innerHTML = total;
+					totalValue.innerHTML = a * place.options[place.selectedIndex].value;
 				}
 			});
 
@@ -331,16 +332,19 @@ window.addEventListener('DOMContentLoaded', function() {
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
 				if (personsSum.value == '' || restDays.value == '') {
-					total = 0;
 					totalValue.innerHTML = 0;
 				} else {
-					totalValue.innerHTML = total;
+					let a = total;
+					// totalValue.innerHTML = total;
+					totalValue.innerHTML = a * place.options[place.selectedIndex].value;
 				}
 			});
 
 			place.addEventListener('change', function() {
+
 				if (personsSum.value == '' || restDays.value == '') {
 					totalValue.innerHTML = 0; 
+					total = (daysSum + personsSum)*4000;
 				} else {
 					// чтобы при выборе опять страны не было переумножения всего и вся
 					let a = total;
@@ -355,11 +359,4 @@ window.addEventListener('DOMContentLoaded', function() {
 				inputCalc[i].value = inputCalc[i].value.replace( /[+,.e]/ig , "");
 			};
 		};
-			// let a = persons.value; 
-			// let arr = ['+', '.', ',', 'e']; 
-			// for (var i = 0; i < arr.length; i++) { 
-			// 	a = a.split( arr[i]).join(''); 
-			// } 
-			// 	persons.value = a; 
-		// };
 });
