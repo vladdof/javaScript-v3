@@ -323,7 +323,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				} else {
 					let a = total;
 					// totalValue.innerHTML = total;
-					totalValue.innerHTML = a * place.options[place.selectedIndex].value;
+					$('#total').animateNumber({ number: a * place.options[place.selectedIndex].value });
 				}
 			});
 
@@ -336,7 +336,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				} else {
 					let a = total;
 					// totalValue.innerHTML = total;
-					totalValue.innerHTML = a * place.options[place.selectedIndex].value;
+					$('#total').animateNumber({ number: a * place.options[place.selectedIndex].value });
 				}
 			});
 
@@ -344,11 +344,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 				if (personsSum.value == '' || restDays.value == '') {
 					totalValue.innerHTML = 0; 
-					total = (daysSum + personsSum)*4000;
 				} else {
 					// чтобы при выборе опять страны не было переумножения всего и вся
 					let a = total;
-					totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+					// totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+					$('#total').animateNumber({ number: a * place.options[place.selectedIndex].value });
 				}
 			});
 
