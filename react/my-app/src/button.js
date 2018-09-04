@@ -6,7 +6,7 @@ class Button extends React.Component {
 	constructor (props) {
 		super(props)
 			// привязываем обработчик
-		this.myClick = this.myClick.bind(this);
+		this.myClick = this.myClick.bind(this); 
 	}
 
 	myClick() {
