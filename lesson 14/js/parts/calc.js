@@ -16,7 +16,7 @@ function calc() {
 				personsSum = +this.value;
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
-				if (restDays.value == '' || persons.value == '') {
+				if (persons.value == '' || daysSum == 0 || restDays.value == '' || personsSum == 0) {
 					totalValue.innerHTML = 0;
 				} else {
 					let a = total;
@@ -29,7 +29,7 @@ function calc() {
 				daysSum = +this.value;
 				total = (daysSum + personsSum)*4000;
 				// если нет одного из значений то ноль на странице
-				if (personsSum.value == '' || restDays.value == '') {
+				if (persons.value == '' || daysSum == 0 || restDays.value == '' || personsSum == 0) {
 					totalValue.innerHTML = 0;
 				} else {
 					let a = total;
@@ -40,7 +40,7 @@ function calc() {
 
 			place.addEventListener('change', function() {
 
-				if (personsSum.value == '' || restDays.value == '') {
+				if (persons.value == '' || daysSum == 0 || restDays.value == '' || personsSum == 0) {
 					totalValue.innerHTML = 0; 
 				} else {
 					// чтобы при выборе опять страны не было переумножения всего и вся

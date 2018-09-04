@@ -359,7 +359,10 @@ function calc() {
       totalValue.innerHTML = 0;
     } else {
       var a = total; // totalValue.innerHTML = total;
-      totalValue.innerHTML = a * place.options[place.selectedIndex].value;
+
+      $('#total').animateNumber({
+        number: a * place.options[place.selectedIndex].value
+      });
     }
   });
   restDays.addEventListener('change', function () {
@@ -370,7 +373,10 @@ function calc() {
       totalValue.innerHTML = 0;
     } else {
       var a = total; // totalValue.innerHTML = total;
-      totalValue.innerHTML = a * place.options[place.selectedIndex].value;
+
+      $('#total').animateNumber({
+        number: a * place.options[place.selectedIndex].value
+      });
     }
   });
   place.addEventListener('change', function () {
@@ -379,13 +385,16 @@ function calc() {
     } else {
       // чтобы при выборе опять страны не было переумножения всего и вся
       var a = total; // totalValue.innerHTML = a * this.options[this.selectedIndex].value;
-      totalValue.innerHTML = a * place.options[place.selectedIndex].value;
+
+      $('#total').animateNumber({
+        number: a * place.options[place.selectedIndex].value
+      });
     }
-  }); 
-  // запрет ввода + , . e
+  }); // запрет ввода + , . e
+
   var _loop = function _loop(i) {
     inputCalc[i].oninput = function () {
-      inputCalc[i].value = inputCalc[i].value.replace(/[^0-9]/gi,'').replace(/\s+/gi,', ');
+      inputCalc[i].value = inputCalc[i].value.replace(/[+,.e]/ig, "");
     };
   };
 
