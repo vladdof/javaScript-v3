@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .tabs__content {
+              display: none; /* по умолчанию прячем все блоки */
+            }
+            .tabs__content.active {
+              display: block; /* по умолчанию показываем нужный блок */
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Progress -->
+        <div class="progress-top"></div>
+        <div class="progress-right"></div>
+        <div class="progress-bottom"></div>
+        <div class="progress-left"></div>
+
+
+        <div class="tabs">
+
+          <ul class="tabs__caption">
+            <li class="active">1-я вкладка</li>
+            <li>2-я вкладка</li>
+            <li>3-я вкладка</li>
+          </ul>
+
+          <div class="tabs__content active">
+            <div class="galleria">
+                <img src="photo1.jpg">
+                <img src="photo2.jpg">
+                <img src="photo3.jpg">
+            </div>
+          </div>
+
+          <div class="tabs__content tabs__two">
+          </div>
+
+          <div class="tabs__content tabs__three">
+                <div id="world"></div>
+          </div>
+
+        </div><!-- .tabs-->
+
+
+        
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="galleria/galleria-1.5.7.min.js"></script>
+        <script>
+	       (function() { 
+                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+                Galleria.configure({
+                    transition: 'flash',
+                    imageCrop: true,
+                    height: 400,
+                    width: 600,
+                    autoplay: 3000,
+                    lightbox: true
+                });
+                Galleria.run('.galleria');
+            }());
+        </script>
+
+        <script>
+            (function($) {
+            $(function() {
+
+              $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+                $(this)
+                  .addClass('active').siblings().removeClass('active')
+                  .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+              });
+
+            });
+            })(jQuery);
+
+
+        </script>
+       
+        <script src="progressScroll.js"></script>
+        <!-- Второй таб -->
+        <script src="canvas.js"></script>
+        <!-- Третий таб -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+        <script src="fly.js"></script>
+    </body>
+</html>
