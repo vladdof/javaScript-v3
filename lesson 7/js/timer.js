@@ -1,4 +1,3 @@
-
 let timerId = setTimeout(timers, 1000);
 
 function timers() {
@@ -25,5 +24,3 @@ function timers() {
 
 	timerId = setTimeout(timers, 1000);
 }
-
-

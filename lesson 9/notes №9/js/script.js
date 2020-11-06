@@ -43,7 +43,7 @@
 // console.log(double(10));
 
 
-//теперь играем с DOM 
+//теперь играем с DOM
 let btn = document.getElementsByTagName('button')[0];
 //если событие происходит на элементе то событием явл сам элемент
 btn.addEventListener('click', function() {
@@ -65,14 +65,14 @@ btn.addEventListener('click', function() {
 
 //контекст вызова или this, и как она называется
 //в этом случае наша функция принадлежит window
-// function showThis() { 
+// function showThis() {
 // 	console.log(this);
 // };
 // showThis();
 
-//функция внутри функции считает своим контекстом выполнения window 
+//функция внутри функции считает своим контекстом выполнения window
 // "use strict" //вместо windiw будет undefind/ теперь функ. не могут брать методы от глобального объекта и свойства
-// function showThis(a,b) { 
+// function showThis(a,b) {
 // 	console.log(this);
 // 		function sum() {
 // 			console.log(this);
@@ -90,7 +90,7 @@ btn.addEventListener('click', function() {
 // 	a: 20,
 // 	b: 15,
 // 	sum: function() {
-// 		//функц.внутри функции, объект выполнения window 
+// 		//функц.внутри функции, объект выполнения window
 // 		function shout() {
 // 			console.log(this);
 // 		}

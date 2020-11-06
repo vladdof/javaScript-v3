@@ -1,4 +1,4 @@
-//Получить кнопку "Открыть магазин" через id
+//Получить кнопку 'Открыть магазин' через id
 let btnOpen = document.getElementById('open-btn'),
 //Получить все поля в левом меню через классы
 	nameValue = document.getElementsByClassName('name-value')[0],
@@ -16,21 +16,19 @@ let btnOpen = document.getElementById('open-btn'),
 	btnBudget = rightSide.getElementsByTagName('button')[1],
 	btnEmployers = rightSide.getElementsByTagName('button')[2],
 //Получить поля ввода товаров, времени и расчета бюджета через querySelector
- 	inputChooseItems = document.querySelector("#items"),
- 	inputTime = document.querySelector("#time"),
- 	inputBudget = document.querySelector("#budget"),
+	inputChooseItems = document.querySelector('#items'),
+	inputTime = document.querySelector('#time'),
+	inputBudget = document.querySelector('#budget'),
 //Получить поля имен сотрудников через querySelectorAll
- 	nameEmployers = document.querySelectorAll(".hire-employers-item"),
+	nameEmployers = document.querySelectorAll('.hire-employers-item'),
 
- 	//задание к 6 дополнительному
- 	main = document.querySelector('.main'),
- 	open_box = document.querySelector('.open'),
- 	discount_box = document.querySelector('.discount-box');
+	//задание к 6 дополнительному
+	main = document.querySelector('.main'),
+	open_box = document.querySelector('.open'),
+	discount_box = document.querySelector('.discount-box');
 
- 	main.style.display = "none";
- 	discount_box.style.display = "none";
- 	
-
+	main.style.display = 'none';
+	discount_box.style.display = 'none';
 
 let budget,
 	nameShop,
@@ -39,17 +37,16 @@ let budget,
 
 //проверка инпутов на латиницу и цифры
 for ( let i = 0; i < nameEmployers.length; i++) {
-	nameEmployers[i].oninput = function()  {
+	nameEmployers[i].oninput = function() {
 		let a = nameEmployers[i].value;
-			if ( a.replace(/[^a-z|0-9]+/g,'') ) {
-				nameEmployers[i].value = '';
-			}
+		if ( a.replace(/[^a-z|0-9]+/g,'') ) {
+			nameEmployers[i].value = '';
+		}
 	};
-};
-
+}
 
 btnOpen.addEventListener('click', () => {
-//isNaN - если параметр,кот.передали не явл.числом то выдает true 
+//isNaN - если параметр,кот.передали не явл.числом то выдает true
 	while ( isNaN(budget) || budget == '' || budget == null ) {
 		budget = +prompt('Ваш бюджет на месяц?', 'Ваш бюджет - 10000');
 	}
@@ -59,24 +56,22 @@ btnOpen.addEventListener('click', () => {
 	nameValue.textContent = nameShop;
 
 	//6 доп задание
-	main.style.display = "";
-	open_box.style.display = "none";
-	discount_box.style.display = "block";
+	main.style.display = '';
+	open_box.style.display = 'none';
+	discount_box.style.display = 'block';
 });
 
 //деактивация кнопок
 btnEmployers.disabled = true;
 btnGoods.disabled = true;
 
-
 btnGoods.addEventListener('click', () => {
-
 	for (let i = 0; i < goodsItems.length; i++) {
 
-		let a = goodsItems[i].value; 
+		let a = goodsItems[i].value;
 
 		if ( typeof a === 'string' && a !== null ) {
-			console.log("Все верно");
+			console.log('Все верно');
 			mainList.shopGoods[i] = a;
 
 			//из инпутов ввода товаров, переносим в див категория товаров
@@ -89,58 +84,53 @@ btnGoods.addEventListener('click', () => {
 
 btnEmployers.addEventListener('click', () => {
 	//перезаписываем имена сотрудников
-	employersValue.textContent = "";
+	employersValue.textContent = '';
 
-		for (let i = 0; i < nameEmployers.length; i++) {
+	for (let i = 0; i < nameEmployers.length; i++) {
 
-			let name = nameEmployers[i].value; 
+		let name = nameEmployers[i].value;
 
-			if ( isNaN(name) ) {
-				console.log("Все верно");
-
-				mainList.employers[i] = name;
-
-				//из инпутов ввода товаров, переносим в див категория товаров
-				employersValue.textContent += mainList.employers[i] + ', ';
-			} 
+		if ( isNaN(name) ) {
+			console.log('Все верно');
+			mainList.employers[i] = name;
+			//из инпутов ввода товаров, переносим в див категория товаров
+			employersValue.textContent += mainList.employers[i] + ', ';
 		}
-	// }
-
-	
+	}
 });
 
 inputChooseItems.addEventListener('change', () => {
-		let items = inputChooseItems.value;
-		//проверка,Что пользователь может ввести
-		if (isNaN(items) && items != '') {
-			mainList.shopItems = items.split(',');
-			mainList.shopItems.sort();
+	let items = inputChooseItems.value;
+	//проверка,Что пользователь может ввести
+	if (isNaN(items) && items != '') {
+		mainList.shopItems = items.split(',');
+		mainList.shopItems.sort();
 
-			itemsValue.textContent = mainList.shopItems;
-		}
-		console.log(mainList.shopItems); 
+		itemsValue.textContent = mainList.shopItems;
+	}
+	console.log(mainList.shopItems);
 });
 
 inputTime.addEventListener('change', () => {
 	let time = inputTime.value;
 
-	if ( time < 0 ) {
-			console.log("Такого не может быть");
-			mainList.open = false;
-		} 	else if (time >= 8 && time <= 20) {
-			console.log("Время работать!");
-			mainList.open = true;
-			} 	else if (time < 24) {
-				console.log("Уже поздно");
-				mainList.open = false;
-				} 	else {
-					console.log("В сутках только 24 часа!");
-					mainList.open = false;
-					};
+	if (time < 0) {
+		console.log('Такого не может быть');
+		mainList.open = false;
+	} else if (time >= 8 && time <= 20) {
+		console.log('Время работать!');
+		mainList.open = true;
+	} else if (time < 24) {
+		console.log('Уже поздно');
+		mainList.open = false;
+	} else {
+		console.log('В сутках только 24 часа!');
+		mainList.open = false;
+	}
 
 	if (mainList.open == true) {
-		isopenValue.style.backgroundColor = "green";
-		isopenValue.textContent = "Открыто";
+		isopenValue.style.backgroundColor = 'green';
+		isopenValue.textContent = 'Открыто';
 
 		btnBudget.disabled = false;
 		//инпуты сотрудников пустые и магазин открыт
@@ -155,7 +145,7 @@ inputTime.addEventListener('change', () => {
 					if ( a.replace(/[^a-z|0-9]+/g,'') ) {
 						nameEmployers[i].value = '';
 					}
-				} else { 
+				} else {
 					btnEmployers.disabled = true;
 				}
 			};
@@ -169,15 +159,14 @@ inputTime.addEventListener('change', () => {
 
 				if (a.lenght != 0 && a != '') {
 					btnGoods.disabled = false;
-				} else { 
-					btnGoods.disabled = true; 
+				} else {
+					btnGoods.disabled = true;
 				}
 			};
 		};
-
 	} else {
-		isopenValue.style.backgroundColor = "red";
-		isopenValue.textContent = "Закрыто";
+		isopenValue.style.backgroundColor = 'red';
+		isopenValue.textContent = 'Закрыто';
 
 		btnGoods.disabled = true;
 		btnBudget.disabled = true;
@@ -185,23 +174,17 @@ inputTime.addEventListener('change', () => {
 	}
 
 	if (time >= 9 && time <= 10) {
-		discountValue.style.backgroundColor = "green";
-		discountValue.textContent = "Время скидок!";
+		discountValue.style.backgroundColor = 'green';
+		discountValue.textContent = 'Время скидок!';
 	} else {
-		discountValue.style.backgroundColor = "red";
-		discountValue.textContent = "Нет скидок!";
+		discountValue.style.backgroundColor = 'red';
+		discountValue.textContent = 'Нет скидок!';
 	}
 });
 
-
-
 btnBudget.addEventListener('click', () => {
-
 	inputBudget.value = budget/30;
-
 });
-
-
 
 var mainList = {
 	budget: budget,
@@ -214,7 +197,7 @@ var mainList = {
 	discountSystem: function discountSystem() {
 		price = 1500;
 
-		alert('Цены на все наши товары — 1500 рублей!' + ' ' + 'Успей купить!\n' + 
+		alert('Цены на все наши товары — 1500 рублей!' + ' ' + 'Успей купить!\n' +
 			'Сейчас только проверим нашу систему скидок.');
 
 		if ( mainList.discount == false ) {
@@ -225,4 +208,3 @@ var mainList = {
 		}
 	}
 };
-

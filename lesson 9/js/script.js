@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		};
 	});
 
-//timer 
+	//timer
 	let deadline = '2018-08-24';
 
 	function getTimeRemaining(endtime) {
@@ -55,23 +55,23 @@ window.addEventListener('DOMContentLoaded', function() {
 			seconds = Math.floor( (t/1000) % 60 ),
 			minutes = Math.floor( (t/1000/60) % 60 ),
 			hours = Math.floor( (t/(1000*60*60)) + timezoneOffset - 1);
-		//Необходимо подставлять 0 перед значениями, 
-			if ( hours < 10 ) {
-				hours = "0" + hours;
-			}
-			if ( minutes < 10 ) {
-				minutes = '0' + minutes;
-			}
-			if ( seconds < 10 ) {
-				seconds = '0' + seconds;
-			}
+		//Необходимо подставлять 0 перед значениями,
+		if ( hours < 10 ) {
+			hours = "0" + hours;
+		}
+		if ( minutes < 10 ) {
+			minutes = '0' + minutes;
+		}
+		if ( seconds < 10 ) {
+			seconds = '0' + seconds;
+		}
 
-			return {
-				'total': t,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
+		return {
+			'total': t,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		};
 	};
 	//запуск часов
 	function setClock(id, endtime) {
@@ -86,16 +86,16 @@ window.addEventListener('DOMContentLoaded', function() {
 			let t = getTimeRemaining(endtime);
 
 			//чтобы в таком случае выводилось: 00:00:00 и все скрипты оставались рабочими
-				if ( Date.parse(endtime) < Date.parse(new Date()) ) {
-					hours.innerHTML = '00';
-					minutes.innerHTML = '00';
-					seconds.innerHTML = '00';
-					return;
-				} else {
-					hours.innerHTML = t.hours;
-					minutes.innerHTML = t.minutes;
-					seconds.innerHTML = t.seconds; 
-				}
+			if ( Date.parse(endtime) < Date.parse(new Date()) ) {
+				hours.innerHTML = '00';
+				minutes.innerHTML = '00';
+				seconds.innerHTML = '00';
+				return;
+			} else {
+				hours.innerHTML = t.hours;
+				minutes.innerHTML = t.minutes;
+				seconds.innerHTML = t.seconds;
+			}
 
 			//когда остановится таймер
 			if ( t.total <=0 ) {
@@ -110,11 +110,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	setClock('timer', deadline);
 
-
-	// modal 
+	// modal
 	let more = document.querySelector('.more'),
-	    overlay = document.querySelector('.overlay'),
-	    close = document.querySelector('.popup-close');
+		overlay = document.querySelector('.overlay'),
+		close = document.querySelector('.popup-close');
 
 	more.addEventListener('click', function() {
 		this.classList.add('more-splash');
@@ -135,7 +134,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	let more_tab = document.querySelectorAll('.description-btn');
 
 	for ( let i = 0; i < more_tab.length; i++ ) {
-		more_tab[i].addEventListener('click', function () {
+		more_tab[i].addEventListener('click', function() {
 			this.classList.add('more-splash');
 			overlay.style.display = 'block';
 			document.body.style.overflow = 'hidden';

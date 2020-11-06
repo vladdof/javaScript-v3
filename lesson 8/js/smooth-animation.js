@@ -1,6 +1,5 @@
 //ждет пока структура html/css загрузяться, легче чем load
 window.addEventListener('DOMContentLoaded', function() {
-
 	// плавная анимация
 	let link = document.querySelectorAll('[href^="#"]');
 
@@ -19,10 +18,9 @@ window.addEventListener('DOMContentLoaded', function() {
 					clearInterval(id);
 					return;
 				} else {
-					window.scrollBy(0,link.getBoundingClientRect().top / 20 - 2); 
+					window.scrollBy(0,link.getBoundingClientRect().top / 20 - 2);
 				}
 			}, 20);
 		});
 	};
-
 });

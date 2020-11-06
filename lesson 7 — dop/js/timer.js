@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	//анимация через requestAnimationFrame
 	let btn = document.querySelector('button');
-	
+
 
 	function animate(draw, duration) {
 		let start = Date.now();
@@ -52,19 +52,12 @@ window.addEventListener('DOMContentLoaded', function() {
 	};
 
 	btn.addEventListener('click', function() {
-		let p = document.querySelector('.time');
+		let time_element = document.querySelector('.time');
 
-		animate(
-			function(timePassed) {
-				p.style.fontSize = timePassed / 10 + 'px';
-				p.style.color = "purple";
-			}, 2000);
+		animate(function(timePassed) {
+			time_element.style.fontSize = timePassed / 10 + 'px';
+			time_element.style.color = 'purple';
+		}, 2000);
 	});
 
 });
-
-
-
-
-
-
