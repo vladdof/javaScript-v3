@@ -1,14 +1,3 @@
-// из-за большой вложенности создали промисы.
-// let func1 = function(param, func2) {
-// 	func2(function(param, func3) {
-// 		func3(function(param, func4) {
-// 			func4(function(param, func5) {
-
-// 			})
-// 		})
-// 	})
-// }	
-
 let drink = 1;
 //  про летящую стрелу
 function shoot(arrow) {
@@ -18,7 +7,7 @@ function shoot(arrow) {
 		// стрела летит 3 сек
 		setTimeout(function() {
 			// если у нас результат выше 50% то вызываем функ.удачи
-			Math.random() > .5 ? resolve({}) : reject("Вы промазали!");
+			Math.random() > .5 ? resolve({}) : reject('Вы промазали!');
 		}, 3000);
 	});
 
@@ -28,23 +17,23 @@ function shoot(arrow) {
 
 // функция победы
 function win() {
-	console.log(" Вы победили! "); 
+	console.log(' Вы победили! ');
 	(drink == 1) ? buyBeer() : giveMoney();
 }
 
 function buyBeer() {
-	console.log(" Вам купили пиво. ");
+	console.log(' Вам купили пиво. ');
 }
 
 function giveMoney() {
-	console.log(" Вам заплатили! ");
+	console.log(' Вам заплатили! ');
 }
 
 function loose() {
-	console.log(" Вы проиграли! "); 
+	console.log(' Вы проиграли! ');
 }
 
 shoot({})
-		.then(mark => console.log(" Вы попали в цель! "))
+		.then(mark => console.log(' Вы попали в цель! '))
 		.then(win)
 		.catch(loose)
