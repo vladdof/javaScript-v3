@@ -8,7 +8,7 @@
 // 	}
 // }
 
-// // преобразовать объект в Json 
+// // преобразовать объект в Json
 // console.log(JSON.stringify(options));
 // // parse обратная трансформация
 // // так можно создавать глубокие объекты
@@ -31,4 +31,3 @@ request.status
 request.statusText //текстовое сообщение от сервера
 request.responseText
 request.readyState // текущее состояние нашего сервера
-

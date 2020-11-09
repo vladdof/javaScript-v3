@@ -14,7 +14,7 @@
 
 //спец цикл для работы с объектами
 for ( let key in options ) {
-	console.log("Свойство " + key + " имеет значение " + options[key])
+	console.log('Свойство ' + key + ' имеет значение ' + options[key])
 	//прост так объект из объекта не вытащить
 }
 
@@ -27,7 +27,7 @@ for ( let key in options ) {
 // // удаляет последний элемент и возвращает
 // arr.pop();
 
-// // добавляет 
+// // добавляет
 // arr.push(6);
 
 // //удаляет в начале
@@ -54,7 +54,7 @@ for ( let key in options ) {
 
 // // let first = [];
 // // let i = prompt("", "");
-// // first = i.split(','); //разбивает 
+// // first = i.split(','); //разбивает
 // // first = i.join(","); //соединяет
 // // first = i.sort(); //сортирует по алфавиту но буквы
 
@@ -68,7 +68,7 @@ for ( let key in options ) {
 // // let i = first.sort(sortNumbers)
 // // console.log(i);
 
-// //ООП 
+// //ООП
 // let soldier = {
 // 	health: 400,
 // 	armor: 100

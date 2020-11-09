@@ -13,10 +13,10 @@
 // 	}
 // 	// функция установки
 // 	this.setAge = function(age) {
-// 		if (typeof age === "number" && age > 0 && age < 110) {
+// 		if (typeof age === 'number' && age > 0 && age < 110) {
 // 			userAge = age;
 // 		} else {
-// 			console.log("Недопустимое значение");
+// 			console.log('Недопустимое значение');
 // 		}
 // 	}
 
@@ -43,18 +43,17 @@
 // console.log(number);
 
 let user = (function() {
-
 	let privat = function() {
 		console.log('world')
 	}
 
 	let sayHello = function() {
-		console.log("hello");
+		console.log('hello');
 	}
 	return { // выводит наружу все
 		sayHello: sayHello,
 		privat: privat
 	}
-}())
+}());
 
 console.log(user.privat());

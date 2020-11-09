@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		};
 	});
 
-//timer 
+//timer
 	let deadline = '2018-08-23';
 
 	function getTimeRemaining(endtime) {
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			minutes = Math.floor( (t/1000/60) % 60 ),
 			hours = Math.floor( (t/(1000*60*60)) );
 
-		//Необходимо подставлять 0 перед значениями, 
+		//Необходимо подставлять 0 перед значениями,
 			if ( hours < 10 ) {
 				hours = "0" + hours;
 			}
@@ -82,20 +82,19 @@ window.addEventListener('DOMContentLoaded', function() {
 			seconds = timer.querySelector('.seconds');
 
 		function updateClock() {
-
 			let t = getTimeRemaining(endtime);
 
 			//чтобы в таком случае выводилось: 00:00:00 и все скрипты оставались рабочими
-				if ( Date.parse(endtime) < Date.parse(new Date()) ) {
-					hours.innerHTML = '00';
-					minutes.innerHTML = '00';
-					seconds.innerHTML = '00';
-					return;
-				} else {
-					hours.innerHTML = t.hours;
-					minutes.innerHTML = t.minutes;
-					seconds.innerHTML = t.seconds; 
-				}
+			if ( Date.parse(endtime) < Date.parse(new Date()) ) {
+				hours.innerHTML = '00';
+				minutes.innerHTML = '00';
+				seconds.innerHTML = '00';
+				return;
+			} else {
+				hours.innerHTML = t.hours;
+				minutes.innerHTML = t.minutes;
+				seconds.innerHTML = t.seconds;
+			}
 
 			//когда остановится таймер
 			if ( t.total <=0 ) {
@@ -110,11 +109,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	setClock('timer', deadline);
 
-
-	// modal 
+	// modal
 	let more = document.querySelector('.more'),
-	    overlay = document.querySelector('.overlay'),
-	    close = document.querySelector('.popup-close');
+		overlay = document.querySelector('.overlay'),
+		close = document.querySelector('.popup-close');
 
 	more.addEventListener('click', function() {
 		this.classList.add('more-splash');
@@ -123,7 +121,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		document.body.style.overflow = 'hidden';
 	});
 
-	close.addEventListener('click', () => {
+	close.addEventListener('click', function() {
 		overlay.style.display = 'none';
 		more.classList.remove('more-splash');
 		document.body.style.overflow = '';
@@ -134,7 +132,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	let more_tab = document.querySelectorAll('.description-btn');
 
 	for ( let i = 0; i < more_tab.length; i++ ) {
-		more_tab[i].addEventListener('click', function () {
+		more_tab[i].addEventListener('click', function() {
 			this.classList.add('more-splash');
 			overlay.style.display = 'block';
 			document.body.style.overflow = 'hidden';

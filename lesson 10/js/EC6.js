@@ -1,8 +1,6 @@
 //ждет пока структура html/css загрузяться, легче чем load
 window.addEventListener('DOMContentLoaded', function() {
-
-// Он должен содержать свойства: height, width, bg, fontSize, textAlign
-	
+	// Он должен содержать свойства: height, width, bg, fontSize, textAlign
 	// создаем класс
 	class Options {
 		// свойства
@@ -14,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			this.backgroundColor = bg;
 		}
 
-		// методы 
+		// методы
 		createDiv() {
 			// создаем эл
 			let p = document.createElement('p'),
@@ -24,12 +22,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
 			// любой текст
 			p.textContent = 'Далеко-далеко за словесными горами в стране';
-			
+
 			// изменять свойства объекта
-			p.style.cssText = `height: ${this.height}px; 
-							   width: ${this.width}px; 
-							   font-size: ${this.fontSize}px; 
-							   text-align: ${this.textAlign}; 
+			p.style.cssText = `height: ${this.height}px;
+							   width: ${this.width}px;
+							   font-size: ${this.fontSize}px;
+							   text-align: ${this.textAlign};
 							   background-color: ${this.backgroundColor};`;
 
 		}

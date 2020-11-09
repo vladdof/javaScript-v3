@@ -1,5 +1,4 @@
 function form() {
-
 	// form
 	let message = new Object();
 	message.loading = 'Загрузка...';
@@ -24,8 +23,8 @@ function form() {
 
 		let request = new XMLHttpRequest();
 
-		request.open("POST", 'server.php');
-		request.setRequestHeader("Content-Type", "application/x-www/form/urlencoded");
+		request.open('POST', 'server.php');
+		request.setRequestHeader('Content-Type', 'application/x-www/form/urlencoded');
 
 		let formData = new FormData(cont_form);
 
@@ -55,14 +54,14 @@ function form() {
 		// вставили сообщение
 		form.appendChild(statusMessage);
 
-		// ajax 
+		// ajax
 		let request = new XMLHttpRequest();
 		// настройка
-		request.open("POST", 'server.php')
+		request.open('POST', 'server.php')
 		// кодировка данных
-		request.setRequestHeader("Content-Type", "application/x-www/form/urlencoded");
+		request.setRequestHeader('Content-Type', 'application/x-www/form/urlencoded');
 
-		// получаем данные из input 
+		// получаем данные из input
 		let formData = new FormData(form);
 
 		// отправляем на сервер данные

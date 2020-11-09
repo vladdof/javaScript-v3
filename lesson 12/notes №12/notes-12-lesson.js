@@ -3,12 +3,12 @@
 // 	heeight: 768,
 // 	background: 'red',
 // 	font: {
-// 		size: "16px",
-// 		color: "#fff"
+// 		size: '16px',
+// 		color: '#fff'
 // 	}
 // }
 
-// // преобразовать объект в Json 
+// // преобразовать объект в Json
 // console.log(JSON.stringify(options));
 // // parse обратная трансформация
 // // так можно создавать глубокие объекты
@@ -18,7 +18,7 @@
 let request = new XMLHttpRequest();
 
 // 2) НАСТРОили наш запрос
-request.open("GET", "server.php", true, login, passsword);
+request.open('GET', 'server.php', true, login, passsword);
 // 1ый аргумент - это method передачи
 // 2ой аргумент путь на сервер
 // 3 - true, обычно никогда не надо false
@@ -31,4 +31,3 @@ request.status
 request.statusText //текстовое сообщение от сервера
 request.responseText
 request.readyState // текущее состояние нашего сервера
-

@@ -24,9 +24,6 @@ li_5.classList.add("menu-item");
 li_5.textContent = "Пятый пункт";
 menu.appendChild(li_5);
 
-
-
-
 //2
 body.style.background = 'url(img/apple_true.jpg) center no-repeat';
 

@@ -5,120 +5,129 @@
 }
 body {
 	height: 100vh;
-  width: 100%;
-  position: relative;
+	width: 100%;
+	position: relative;
 }
 /*// Progress*/
 .progress-top,
 .progress-right,
 .progress-bottom,
 .progress-left {
-  position: fixed;
-  z-index: 999;
-  background-color: #866e72;
+	position: fixed;
+	z-index: 999;
+	background-color: #866e72;
 }
 
 .progress-top,
 .progress-bottom {
-  height: 0.35rem;
+	height: 0.35rem;
 }
 
 .progress-right,
 .progress-left {
-  width: 0.35rem;
+	width: 0.35rem;
 }
 
 .progress-top,
 .progress-right {
-  top: 0;
+	top: 0;
 }
 
 .progress-top,
 .progress-left {
-  left: 0;
+	left: 0;
 }
 
 .progress-bottom,
 .progress-left {
-  bottom: 0;
+	bottom: 0;
 }
 
 .progress-bottom,
 .progress-right {
-  right: 0;
+	right: 0;
 }
 
 .tabs__caption {
 	display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    background: #f4f5f7;
-    margin-bottom: 50px;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	background: #f4f5f7;
+	margin-bottom: 50px;
 }
+
 .tabs__two {
 	margin-top: -50px;
 }
+
 li {
 	font-size: 26px;
-    color: #866e72;
-    position: relative;
-    padding: 30px;
+	color: #866e72;
+	position: relative;
+	padding: 30px;
 }
+
 li:hover {
 	color: #f13d5b;
 }
 
 li:before {
-  content: '';
-  position: absolute;
-  top: 5%;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-  border-top: solid 1px #866e72;
-  border-bottom: solid 1px #866e72;
-  transition: 0.25s;
-  transform: scaleX(0);
+	content: '';
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	right: 5%;
+	border-top: solid 1px #866e72;
+	border-bottom: solid 1px #866e72;
+	transition: 0.25s;
+	transform: scaleX(0);
 }
+
 li:after{
-  content: '';
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  bottom: 5%;
-  left: 5%;
-  border-left: solid 1px #866e72;
-  border-right: solid 1px #866e72;
-  transition: 0.2s;
-  transform: scaleY(0);
+	content: '';
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	border-left: solid 1px #866e72;
+	border-right: solid 1px #866e72;
+	transition: 0.2s;
+	transform: scaleY(0);
 }
+
 li:hover:before,
 li:hover:after {
-  transform: scale(1);
+	transform: scale(1);
 }
+
 .galleria-container {
 	display: block;
 	margin: 0 auto;
 }
+
 .galleria-thumbnails {
 	margin: 0 auto;
 }
+
 .galleria-theme-classic {
-    background: #f7f7f7;
+	background: #f7f7f7;
 }
 
 .tabs__three {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: #b4d5c2;
-    margin-top: -50px;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	background: #b4d5c2;
+	margin-top: -50px;
 }
+
 #world {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: linear-gradient(#e4e0ba, #f7d9aa);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(#e4e0ba, #f7d9aa);
 }

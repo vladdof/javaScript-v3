@@ -1,5 +1,4 @@
 var num = 33721;
-
 //функционал короче и элегантнее
 //split(" ") разделяет пробелами
 // var numMas = eval(num.toString().split("").join("*"));

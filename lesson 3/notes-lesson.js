@@ -11,7 +11,7 @@ function showFirstMessage(text) {
 	let num = 20;
 }
 
-showFirstMessage("Hello world!");
+showFirstMessage('Hello world!');
 
 
 // не важно где мы вызвали функцию, если она обьявлена примером ниже
@@ -29,24 +29,22 @@ console.log(calc(4,15));
 // }
 
 //новый синтаксис через стрелку
-// let calc = (a,b) => a*b 
+// let calc = (a,b) => a*b
 
 
 //свойства строк
-let str = "Test";
+let str = 'Test';
 console.log(str.length)
 
 //методы строк
 console.log(str.toUpperCase());
 console.log(str.toLowerCase());
 
-//округление 
-let num = "12.2";
+//округление
+let num = '12.2';
 console.log(Math.round(num));
 
 //до первого символа не цифры
 console.log(parseInt(num));
 //делает тоже самое, но берет одну точку
 console.log(parseFloat(num));
-
-

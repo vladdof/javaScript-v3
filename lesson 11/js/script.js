@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		};
 	});
 
-//timer 
+	//timer
 	let deadline = '2018-08-23';
 
 	function getTimeRemaining(endtime) {
@@ -55,23 +55,23 @@ window.addEventListener('DOMContentLoaded', function() {
 			minutes = Math.floor( (t/1000/60) % 60 ),
 			hours = Math.floor( (t/(1000*60*60)) );
 
-		//Необходимо подставлять 0 перед значениями, 
-			if ( hours < 10 ) {
-				hours = "0" + hours;
-			}
-			if ( minutes < 10 ) {
-				minutes = '0' + minutes;
-			}
-			if ( seconds < 10 ) {
-				seconds = '0' + seconds;
-			}
+		//Необходимо подставлять 0 перед значениями,
+		if ( hours < 10 ) {
+			hours = '0' + hours;
+		}
+		if ( minutes < 10 ) {
+			minutes = '0' + minutes;
+		}
+		if ( seconds < 10 ) {
+			seconds = '0' + seconds;
+		}
 
-			return {
-				'total': t,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
+		return {
+			'total': t,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		};
 	};
 	//запуск часов
 	function setClock(id, endtime) {
@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				} else {
 					hours.innerHTML = t.hours;
 					minutes.innerHTML = t.minutes;
-					seconds.innerHTML = t.seconds; 
+					seconds.innerHTML = t.seconds;
 				}
 
 			//когда остановится таймер
@@ -110,11 +110,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	setClock('timer', deadline);
 
-
-	// modal 
+	// modal
 	let more = document.querySelector('.more'),
-	    overlay = document.querySelector('.overlay'),
-	    close = document.querySelector('.popup-close');
+		overlay = document.querySelector('.overlay'),
+		close = document.querySelector('.popup-close');
 
 	more.addEventListener('click', function() {
 		this.classList.add('more-splash');
@@ -134,7 +133,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	let more_tab = document.querySelectorAll('.description-btn');
 
 	for ( let i = 0; i < more_tab.length; i++ ) {
-		more_tab[i].addEventListener('click', function () {
+		more_tab[i].addEventListener('click', function() {
 			this.classList.add('more-splash');
 			overlay.style.display = 'block';
 			document.body.style.overflow = 'hidden';
@@ -165,8 +164,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		let request = new XMLHttpRequest();
 
-		request.open("POST", 'server.php');
-		request.setRequestHeader("Content-Type", "application/x-www/form/urlencoded");
+		request.open('POST', 'server.php');
+		request.setRequestHeader('Content-Type', 'application/x-www/form/urlencoded');
 
 		let formData = new FormData(cont_form);
 
@@ -196,14 +195,14 @@ window.addEventListener('DOMContentLoaded', function() {
 		// вставили сообщение
 		form.appendChild(statusMessage);
 
-		// ajax 
+		// ajax
 		let request = new XMLHttpRequest();
 		// настройка
-		request.open("POST", 'server.php')
+		request.open('POST', 'server.php')
 		// кодировка данных
-		request.setRequestHeader("Content-Type", "application/x-www/form/urlencoded");
+		request.setRequestHeader('Content-Type', 'application/x-www/form/urlencoded');
 
-		// получаем данные из input 
+		// получаем данные из input
 		let formData = new FormData(form);
 
 		// отправляем на сервер данные
